@@ -7,7 +7,7 @@ const explore = (sec) =>{
     console.log(fun);
     const btnTransition = new TimelineMax();
 btnTransition
-.to(`#${sec.id} .poster-background img`,1.3,{top:0,left:0,width:'100%',height:'100%'})
+.to(`#${sec.id} .poster-background img`,1,{top:0,left:0,width:'100%',height:'100%'})
 .to(`#${sec.id} .poster-background`,1,{transform:'rotateY(0)'})
 .to(`#${sec.id} .initial-display`,1,{opacity:0})
 .set(`#${sec.id} .initial-display`,{css:{display:'none'}})
@@ -33,7 +33,15 @@ btnTransition
                     .set(`#workshops`,{css:{height:'auto'}})
                     .set(`#workshops .after-content`,{css:{display:'grid'}})
                     .to('.wk-card',1,{opacity:1});
-                    break;        
+                    break;  
+                    
+            case 'gallery':
+                    var show_gl  = new TimelineMax();
+                    show_gl
+                    .set(`#gallery`,{css:{height:'auto'}})
+                    .set(`#gallery .after-content`,{css:{display:'grid'}})
+                    .to('#gallery .after-content',1,{opacity:1});
+                    break;       
                     }
         
 });
