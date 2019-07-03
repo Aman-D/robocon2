@@ -1,0 +1,52 @@
+/*Colors*/
+$color1 : #353E4A;
+$color2 : #9ACB34;
+$color3 : #FBF8EF;
+$color4 : #04D0D9;
+
+
+/*Fonts*/
+$font1: 'Chivo', sans-serif;
+$font2: 'Overpass', sans-serif;
+
+/*default*/
+
+
+*{
+    padding:0;
+    margin:0;
+}
+body
+{   overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: scroll;
+    
+}
+a  {text-decoration: none;}
+li { list-style: none;}
+i   {padding:0 10px;}
+button{
+    outline:none;
+    border:none;
+    padding:10px 15px;
+    font-family: $font2;
+    font-size: 15px;
+    cursor:pointer;
+}
+section{
+    margin-bottom:100px;
+}
+
+
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+.none{
+    display: none;
+}
