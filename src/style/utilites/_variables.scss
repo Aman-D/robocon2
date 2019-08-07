@@ -20,7 +20,7 @@ body
 {   overflow-x: hidden;
     position: relative;
     scroll-behavior: smooth;
-    overscroll-behavior-y: scroll;
+    overflow-y: scroll;
     
 }
 a  {text-decoration: none;}
@@ -46,7 +46,9 @@ section{
     align-items: center;
     flex-direction: $direction;
 }
-
+.active{
+    background-color: $color2;
+}
 .none{
     display: none;
 }

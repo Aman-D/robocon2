@@ -1,19 +1,31 @@
 
 
+        // console.log(explore.getAttribute('data-id'));
+// })
 
 
-const explore = (sec) =>{
-    let fun = sec.id;
-    console.log(fun);
-    const btnTransition = new TimelineMax();
+// const explore = (sec) =>{
+// //     let fun = sec.id;
+// //     console.log(fun);
+    
+// // fun= null;
+// }
+
+
+
+const ex = document.querySelectorAll('.explore');
+ex.forEach(explore => {
+        explore.addEventListener('click',()=>{
+                const sec = explore.getAttribute('data-id');
+                const btnTransition = new TimelineMax();
 btnTransition
-.to(`#${sec.id} .poster-background img`,1,{top:0,left:0,width:'100%',height:'100%'})
-.to(`#${sec.id} .poster-background`,1,{transform:'rotateY(0)'})
-.to(`#${sec.id} .initial-display`,1,{opacity:0})
-.set(`#${sec.id} .initial-display`,{css:{display:'none'}})
+.to(`#${sec} .poster-background img`,1,{top:0,left:0,width:'100%',height:'100%'})
+.to(`#${sec} .poster-background`,1,{transform:'rotateY(0)'})
+.to(`#${sec} .initial-display`,1,{opacity:0})
+.set(`#${sec} .initial-display`,{css:{display:'none'}})
 .add(()=>{
 
-        switch(sec.id){
+        switch(sec){
             case 'about':
                     var show_about  = new TimelineMax();
                     show_about
@@ -45,8 +57,4 @@ btnTransition
                     }
         
 });
-fun= null;
-}
-
-
-
+        })});
